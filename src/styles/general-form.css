@@ -1,0 +1,10 @@
+.form {
+    display: flex;
+    gap: 20px;
+    padding: 30px 10px;
+    border: solid black
+}
+
+.form label {
+    margin-right: 6px;
+}
