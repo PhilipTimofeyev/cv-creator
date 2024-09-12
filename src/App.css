@@ -1,4 +1,16 @@
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: rgb(201, 225, 234);
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  background-color: rgb(86, 194, 240);
+}
 
 .main-container {
   display: flex;
