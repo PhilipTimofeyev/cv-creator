@@ -17,11 +17,14 @@ export default function MyApp() {
     setPerson(data)
   };
 
+
   return (
     <div className='main-container'>
       <h1> CV Creator</h1>
-      <GeneralForm onSubmit={handleFormSubmit} />
-      <p>{name}</p>
+      <GeneralForm 
+        onSubmit={handleFormSubmit} 
+        person={person}
+      />
       <CV person={person}/>
     </div>
   )
