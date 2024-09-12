@@ -8,3 +8,22 @@
 .form label {
     margin-right: 6px;
 }
+
+h1 {
+  text-align: center;
+  background-color: aqua;
+}
+
+
+/* RESUME */
+
+.cv-container {
+  margin-top: 50px;
+  width: 30vw;
+  height: 75vh;
+  border: solid black;
+}
+
+.general {
+  text-align: right;
+}

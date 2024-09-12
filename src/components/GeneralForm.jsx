@@ -1,14 +1,19 @@
-import '../styles/general-form.css'
+import '../styles/general-form.css';
 import { useRef } from 'react'
 
-export function GeneralForm() {
+export function GeneralForm({onSubmit}) {
     const firstName = useRef('')
     const lastName = useRef('')
     const email = useRef('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e)
+        const generalInfo = {
+            firstName: firstName.current.value,
+            lastName: lastName.current.value,
+            email: email.current.value
+        }
+        onSubmit(generalInfo);
     }
 
     return (
@@ -18,22 +23,22 @@ export function GeneralForm() {
             <div>
                 <label>First Name:</label>
                 <input
-                 type='text'
-                 onChange={(e) => (firstName.current = e.target.value)}
+                    type='text'
+                    ref={firstName}
                  />
             </div>
             <div>
                 <label>Last Name:</label>
                 <input
                     type='text'
-                    onChange={(e) => (lastName.current = e.target.value)}
+                    ref={lastName}
                 />
             </div>
             <div>
                 <label>Email:</label>
                 <input
                     type='text'
-                    onChange={(e) => (email.current = e.target.value)}
+                    ref={email}
                 />
             </div>
             <button type="submit">Submit</button>
