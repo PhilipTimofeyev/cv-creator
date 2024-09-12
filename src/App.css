@@ -1,11 +1,18 @@
-/* h1 {
-  text-align: center;
-  background-color: aqua;
-} */
+
 
 .main-container {
   display: flex;
+}
+
+.form-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 3vw;
+  padding-right: 2vw;
+  border-right: solid black 8px;
+}
+
+.cv {
   margin: auto;
 }

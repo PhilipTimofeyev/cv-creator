@@ -73,10 +73,11 @@ export function ExperienceForm({ onSubmit, experience}) {
             </div>
             <div>
                 <label>Responsibilities:</label>
-                <input
+                <textarea
                         value={responsibilitiesInputValue} onChange={handleResponsibilitiesChange}
                     type='text'
                     ref={responsibilities}
+                    className='text-area'
                 />
             </div>
             <div>
@@ -95,8 +96,10 @@ export function ExperienceForm({ onSubmit, experience}) {
                     ref={dateTo}
                 />
             </div>
-            <button type="submit">Submit</button>
-            <button type="button" onClick={handleEditClick}>Edit</button>
+            <div className='formBtns'>
+                <button type="submit">Submit</button>
+                <button type="button" onClick={handleEditClick}>Edit</button>
+            </div>
         </form>
         </>
     )

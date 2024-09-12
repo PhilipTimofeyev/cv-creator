@@ -44,21 +44,27 @@ export default function MyApp() {
 
 
   return (
-    <div className='main-container'>
+    <div>
       <h1> CV Creator</h1>
-      <GeneralForm 
-        onSubmit={handleGeneralSubmit} 
-        person={person}
-      />
-      <EducationForm
-        onSubmit={handleEducationSubmit}
-        education={education}
-      />
-      <ExperienceForm
-        onSubmit={handleExperienceSubmit}
-        experience={experience}
-      />
-      <CV person={person} education={education} experience={experience} />
+      <div className='main-container'>
+        <div className='form-container'>
+        <GeneralForm 
+          onSubmit={handleGeneralSubmit} 
+          person={person}
+        />
+        <EducationForm
+          onSubmit={handleEducationSubmit}
+          education={education}
+        />
+        <ExperienceForm
+          onSubmit={handleExperienceSubmit}
+          experience={experience}
+        />
+        </div>
+        <div class="cv">
+          <CV person={person} education={education} experience={experience} />
+        </div>
+      </div>
     </div>
   )
 }

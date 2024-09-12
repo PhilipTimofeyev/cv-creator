@@ -82,8 +82,10 @@ export function GeneralForm({ onSubmit, person}) {
                     ref={phone}
                 />
             </div>
-            <button type="submit">Submit</button>
-            <button type="button" onClick={handleEditClick}>Edit</button>
+            <div className='formBtns'>
+                <button type="submit">Submit</button>
+                <button type="button" onClick={handleEditClick}>Edit</button>
+            </div>
         </form>
         </>
     )
