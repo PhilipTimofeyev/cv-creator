@@ -52,14 +52,18 @@ h1 {
   border: solid black;
 }
 
-.general {
+/* .general {
   text-align: right;
   min-height: 100px;
   margin-right: 20px;
-}
+} */
 
+.general,
 .education,
 .experience {
   text-align: center;
 }
 
+.cv-container h2 {
+  background-color: rgb(86, 194, 240);
+}
