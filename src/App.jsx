@@ -10,24 +10,24 @@ import { CV } from './components/CV.jsx'
 export default function MyApp() {
 
   const [person, setPerson] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: ''
+    firstName: 'Harry',
+    lastName: 'Potter',
+    email: 'harrypotter@hogwarts.com',
+    phone: '555-123-4567'
   });
 
   const [education, setEducation] = useState({
-    schoolName: '',
-    titleOfStudy: '',
-    dateOfStudy: '',
+    schoolName: 'Hogwarts',
+    titleOfStudy: 'Wizardry',
+    dateOfStudy: '1991-09-12',
   });
 
   const [experience, setExperience] = useState({
-    company: '',
-    position: '',
-    responsibilities: '',
-    dateFrom: '',
-    dateTo: '',
+    company: 'Ministry of Magic',
+    position: 'Auror',
+    responsibilities: 'Investigate crimes of the dark arts, apprehend dark wizards and witches.',
+    dateFrom: '1995-05-26',
+    dateTo: '1998-03-12',
   });
 
   const handleGeneralSubmit = (data) => {

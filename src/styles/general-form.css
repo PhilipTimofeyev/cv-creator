@@ -53,9 +53,8 @@ h1 {
   min-height: 100px;
 }
 
-.education {
+.education,
+.experience {
   text-align: center;
 }
-p {
-  visibility: visible;
-}
+
