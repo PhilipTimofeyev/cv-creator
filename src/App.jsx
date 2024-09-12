@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './components/GeneralForm.jsx'
 import './App.css'
 import { GeneralForm } from './components/GeneralForm.jsx'
+import { EducationForm } from './components/EducationForm.jsx'
 import { CV } from './components/CV.jsx'
 
 
@@ -14,8 +15,18 @@ export default function MyApp() {
     phone: ''
   });
 
-  const handleFormSubmit = (data) => {
+  const [education, setEducation] = useState({
+    schoolName: '',
+    titleOfStudy: '',
+    dateOfStudy: '',
+  });
+
+  const handleGeneralSubmit = (data) => {
     setPerson(data)
+  };
+
+  const handleEducationSubmit = (data) => {
+    setEducation(data)
   };
 
 
@@ -23,10 +34,14 @@ export default function MyApp() {
     <div className='main-container'>
       <h1> CV Creator</h1>
       <GeneralForm 
-        onSubmit={handleFormSubmit} 
+        onSubmit={handleGeneralSubmit} 
         person={person}
       />
-      <CV person={person}/>
+      <EducationForm
+        onSubmit={handleEducationSubmit}
+        education={education}
+      />
+      <CV person={person} education={education}/>
     </div>
   )
 }
