@@ -26,7 +26,6 @@ export function GeneralForm({ onSubmit, person}) {
         setPhoneInputValue(person.phone)
     };
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const generalInfo = {
@@ -49,7 +48,7 @@ export function GeneralForm({ onSubmit, person}) {
 
     return (
         <>
-        <h2>General Form</h2>
+        <h2>General</h2>
         <form onSubmit={handleSubmit} className="form">
             <div>
                 <label>First Name:</label>

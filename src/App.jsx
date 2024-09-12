@@ -3,6 +3,7 @@ import './components/GeneralForm.jsx'
 import './App.css'
 import { GeneralForm } from './components/GeneralForm.jsx'
 import { EducationForm } from './components/EducationForm.jsx'
+import { ExperienceForm } from './components/ExperienceForm.jsx'
 import { CV } from './components/CV.jsx'
 
 
@@ -21,12 +22,24 @@ export default function MyApp() {
     dateOfStudy: '',
   });
 
+  const [experience, setExperience] = useState({
+    company: '',
+    position: '',
+    responsibilities: '',
+    dateFrom: '',
+    dateTo: '',
+  });
+
   const handleGeneralSubmit = (data) => {
     setPerson(data)
   };
 
   const handleEducationSubmit = (data) => {
     setEducation(data)
+  };
+
+  const handleExperienceSubmit = (data) => {
+    setExperience(data)
   };
 
 
@@ -41,7 +54,11 @@ export default function MyApp() {
         onSubmit={handleEducationSubmit}
         education={education}
       />
-      <CV person={person} education={education}/>
+      <ExperienceForm
+        onSubmit={handleExperienceSubmit}
+        experience={experience}
+      />
+      <CV person={person} education={education} experience={experience} />
     </div>
   )
 }
