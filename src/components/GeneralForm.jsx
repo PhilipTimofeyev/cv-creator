@@ -3,23 +3,27 @@ import { useRef } from 'react'
 import { useState } from 'react'
 
 export function GeneralForm({ onSubmit, person}) {
-     const firstName = useRef('')
-     const lastName = useRef('')
-     const email = useRef('')
+    const firstName = useRef('')
+    const lastName = useRef('')
+    const email = useRef('')
+    const phone = useRef('')
 
     const [firstNameInputValue, setFirstNameInputValue] = useState('');
     const [lastNameInputValue, setLastNameInputValue] = useState('');
     const [emailInputValue, setEmailInputValue] = useState('');
+    const [phoneInputValue, setPhoneInputValue] = useState('');
 
     const handleFirstNameChange = (event) => setFirstNameInputValue(event.target.value)
     const handleLastNameChange = (event) => setLastNameInputValue(event.target.value)
     const handleEmailChange = (event) => setEmailInputValue(event.target.value)
+    const handlePhoneChange = (event) => setPhoneInputValue(event.target.value)
 
 
     const handleEditClick = () => {
         setFirstNameInputValue(person.firstName)
         setLastNameInputValue(person.lastName)
         setEmailInputValue(person.email)
+        setPhoneInputValue(person.phone)
     };
 
 
@@ -28,7 +32,9 @@ export function GeneralForm({ onSubmit, person}) {
         const generalInfo = {
             firstName: firstName.current.value,
             lastName: lastName.current.value,
-            email: email.current.value
+            email: email.current.value,
+            phone: phone.current.value
+            
         }
         resetGeneralForm()
         onSubmit(generalInfo);
@@ -38,6 +44,7 @@ export function GeneralForm({ onSubmit, person}) {
         setFirstNameInputValue("")
         setLastNameInputValue("")
         setEmailInputValue("")
+        setPhoneInputValue("")
     }
 
     return (
@@ -50,7 +57,6 @@ export function GeneralForm({ onSubmit, person}) {
                     value={firstNameInputValue} onChange={handleFirstNameChange}
                     type='text'
                     ref={firstName}
-                    // onChange={handleChange}
                  />
             </div>
             <div>
@@ -67,6 +73,14 @@ export function GeneralForm({ onSubmit, person}) {
                     value={emailInputValue} onChange={handleEmailChange}
                     type='text'
                     ref={email}
+                />
+            </div>
+            <div>
+                <label>Phone Number:</label>
+                <input
+                    value={phoneInputValue} onChange={handlePhoneChange}
+                    type='text'
+                    ref={phone}
                 />
             </div>
             <button type="submit">Submit</button>

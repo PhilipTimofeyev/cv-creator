@@ -10,7 +10,8 @@ export default function MyApp() {
   const [person, setPerson] = useState({
     firstName: '',
     lastName: '',
-    email: ''
+    email: '',
+    phone: ''
   });
 
   const handleFormSubmit = (data) => {

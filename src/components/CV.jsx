@@ -1,12 +1,13 @@
 import { GeneralForm } from '../components/GeneralForm.jsx'
 
-export function CV({person: {firstName, lastName, email}}) {
+export function CV({person: {firstName, lastName, email, phone}}) {
     return (
     <div className="cv-container">
         <h1>Resume</h1>
         <div className="general">
             <p>{firstName} {lastName}</p>
             <p>{email}</p>
+            <p>{phone}</p>
         </div>
     </div>
     )
